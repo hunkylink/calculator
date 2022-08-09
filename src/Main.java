@@ -1,26 +1,50 @@
 import java.util.Scanner;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите выражение:");
-        String input = scanner.nextLine();
+        //printMenu();
+        int input = scanner.nextInt();
+        System.out.println(Converter.arabicToRoman(input));
 
-        String[] strings = input.split(" "); // В задании примеры выражений написаны через пробел, значит и тут делить строку ввода будем по пробелу.
-        short a = Short.parseShort(strings[0]); // Так как калькулятор не должен работать с числами больше 10,
-        short b = Short.parseShort(strings[2]); // то все поместится в short.
-        scanner.close();
+        /*while (true) {
+            System.out.println("Введите выражение:");
+            String input = scanner.nextLine();
 
-        if (a >= 0 && a <= 10 && b >= 0 && b <= 10){
-            switch (strings[1]) {
-                case "+" -> System.out.println(a + b);
-                case "-" -> System.out.println(a - b);
-                case "*" -> System.out.println(a * b);
-                case "/" -> System.out.println(a / b);
-                default -> System.out.println("Извините, такого арифметического действия я пока не знаю.");
+            try{
+                String[] strings = input.split(" "); // В задании примеры выражений написаны через пробел, значит и тут делить строку ввода будем по пробелу.
+                if (strings.length != 3) throw new Exception("Ошибка! Должно быть два числа и знак операции между ними.");
+
+
             }
-        } else {
-            System.out.println("Числа должны быть в диапазоне от 0 до 10.");
-        }
+            catch (Exception e){
+                System.out.println(e.getMessage());
+                break;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }*/
+
+    }
+
+    static void printMenu(){
+        System.out.println("Привет! Этот калькулятор умеет складывать, вычитать, умножать и делить два числа");
+        System.out.println("от 0 до 10 в римской и арабской системах счисления. Введи два числа одной системы,");
+        System.out.println("знак арифметической операции между ними (+, -, *, /). Не забудь писать все через пробел!");
+
     }
 }
