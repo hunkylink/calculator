@@ -1,14 +1,15 @@
 public class Number {
-    boolean isArabic;
     int value;
+    boolean isArabic;
 
 
-    Number(int value, boolean isArabic) {
-        this.value = value;
-        this.isArabic = isArabic;
+
+    Number(int value, boolean isArabic) {                               //Тут все просто, каждое число, введенное пользователем записывается в поля объекта.
+        this.value = value;                                             //Тип системы счисления реализован через булевое значение.
+        this.isArabic = isArabic;                                       //Потом просты вызываем эти параметры для каждого из двух чисел в нужный момент.
     }
 
 
 
 
-}
+} // Надеюсь все получилось не очень плохо, буду очень рад, если пройду дальше :)

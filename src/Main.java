@@ -11,6 +11,7 @@ public class Main {
             String input = scanner.nextLine();
 
             if(input.equals("0000")){
+                System.out.println("До свидания!");
                 break;
             }
 
